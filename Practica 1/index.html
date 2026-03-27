@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica 1 - INF-133</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f7f6;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            border-bottom: 3px solid #1a73e8;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        #pantalla-web {
+            background: #2d2d2d;
+            color: #76ff03;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', monospace;
+            margin-bottom: 25px;
+            min-height: 60px;
+            border: 2px solid #1a73e8;
+            white-space: pre-wrap;
+        }
+
+        .grid-ejercicios {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1fr solid #eee;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #1a73e8;
+            transform: translateY(-2px);
+        }
+
+        button {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #0d47a1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Práctica 1 - INF-133</h1>
+            <p><strong>Nombre Completo:</strong> Juan Luis Tijo Osco</p>
+            <p><strong>CI:</strong> 6992506 LP</p>
+            <p><strong>Carrera:</strong> Informatica</p>
+            <p><strong>Materia:</strong> Programación Web 3</p>
+            <p><strong>Gestión:</strong> I/2026</p>
+        </div>
+
+        <div class="grid-ejercicios">
+            <div class="card"><span>1. Contar Vocales</span><button onclick="ejercicio1()">Ejecutar</button> <a
+                    href="js/Ejercicio_01.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>2. Invertir Frase</span><button onclick="ejercicio2()">Ejecutar</button> <a
+                    href="js/Ejercicio_02.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>3. Pares e Impares</span><button onclick="ejercicio3()">Ejecutar</button> <a
+                    href="js/Ejercicio_03.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>4. Mayor y Menor</span><button onclick="ejercicio4()">Ejecutar</button> <a
+                    href="js/Ejercicio_04.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>5. Palíndromo</span><button onclick="ejercicio5()">Ejecutar</button> <a
+                    href="js/Ejercicio_05.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>6. Desestructuración 1</span><button onclick="ejercicio6()">Ejecutar</button> <a
+                    href="js/Ejercicio_06.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>7. Desestructuración 2</span><button onclick="ejercicio7()">Ejecutar</button> <a
+                    href="js/Ejercicio_07.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>8. Callback (2s)</span><button onclick="ejercicio8()">Ejecutar</button> <a
+                    href="js/Ejercicio_08.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>9. Promesa (3s)</span><button onclick="ejercicio9()">Ejecutar</button> <a
+                    href="js/Ejercicio_09.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>10. Teoría Asíncrona</span><button onclick="ejercicio10()">Ejecutar</button> <a
+                    href="js/Ejercicio_10.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>11. Encadenamiento</span><button onclick="ejercicio11()">Ejecutar</button> <a
+                    href="js/Ejercicio_11.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>12. CB a Async/Await</span><button onclick="ejercicio12()">Ejecutar</button> <a
+                    href="js/Ejercicio_12.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>13. Promesa a Async</span><button onclick="ejercicio13()">Ejecutar</button> <a
+                    href="js/Ejercicio_13.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>14. Promesa a CB</span><button onclick="ejercicio14()">Ejecutar</button> <a
+                    href="js/Ejercicio_14.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>15. CB a Promesa</span><button onclick="ejercicio15()">Ejecutar</button> <a
+                    href="js/Ejercicio_15.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+            <div class="card"><span>16. Migración Final</span><button onclick="ejercicio16()">Ejecutar</button> <a
+                    href="js/Ejercicio_16.js" target="_blank">
+                    <button>Ver código</button>
+                </a></div>
+        </div>
+    </div>
+
+
+    <script src="js/Ejercicio_01.js"></script>
+    <script src="js/Ejercicio_02.js"></script>
+    <script src="js/Ejercicio_03.js"></script>
+    <script src="js/Ejercicio_04.js"></script>
+    <script src="js/Ejercicio_05.js"></script>
+    <script src="js/Ejercicio_06.js"></script>
+    <script src="js/Ejercicio_07.js"></script>
+    <script src="js/Ejercicio_08.js"></script>
+    <script src="js/Ejercicio_09.js"></script>
+    <script src="js/Ejercicio_10.js"></script>
+    <script src="js/Ejercicio_11.js"></script>
+    <script src="js/Ejercicio_12.js"></script>
+    <script src="js/Ejercicio_13.js"></script>
+    <script src="js/Ejercicio_14.js"></script>
+    <script src="js/Ejercicio_15.js"></script>
+    <script src="js/Ejercicio_16.js"></script>
+</body>
+
+</html>
